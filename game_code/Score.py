@@ -5,8 +5,8 @@ import pygame
 from pygame import Surface, Rect, KEYDOWN, K_RETURN, K_BACKSPACE, K_ESCAPE
 from pygame.font import Font
 
-from code.Const import C_YELLOW, SCORE_POS, MENU_OPTION, C_WHITE
-from code.DBProxy import DBProxy
+from game_code.Const import C_YELLOW, SCORE_POS, MENU_OPTION, C_WHITE
+from game_code.DBProxy import DBProxy
 
 
 class Score:

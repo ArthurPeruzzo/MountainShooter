@@ -4,10 +4,10 @@ import sys
 
 import pygame
 
-from code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
-from code.Level import Level
-from code.Menu import Menu
-from code.Score import Score
+from game_code.Const import WIN_WIDTH, WIN_HEIGHT, MENU_OPTION
+from game_code.Level import Level
+from game_code.Menu import Menu
+from game_code.Score import Score
 
 
 class Game:
@@ -27,6 +27,9 @@ class Game:
                 level_return = level.run(player_score)
                 if level_return:
                     level = Level(self.window, 'Level2', menu_return, player_score)
+                    level_return = level.run(player_score)
+                if level_return:
+                    level = Level(self.window, 'Level3', menu_return, player_score)
                     level_return = level.run(player_score)
                     if level_return:
                         score.save(menu_return, player_score)
